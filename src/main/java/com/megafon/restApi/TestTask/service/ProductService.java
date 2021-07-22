@@ -2,11 +2,13 @@ package com.megafon.restApi.TestTask.service;
 
 import com.megafon.restApi.TestTask.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
-import repository.ProductRepository;
+import com.megafon.restApi.TestTask.repository.ProductRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ProductService {
     @Autowired
     private ProductRepository productRepository;

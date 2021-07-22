@@ -1,4 +1,4 @@
-package repository;
+package com.megafon.restApi.TestTask.repository;
 
 import com.megafon.restApi.TestTask.model.Product;
 import org.springframework.data.repository.CrudRepository;

@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class ProductController {
 
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @GetMapping("/product")
     public List<Product> getAllProduct(){
