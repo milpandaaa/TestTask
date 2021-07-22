@@ -5,33 +5,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.megafon.restApi.TestTask.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public List<Product> getAllProduct() {
-        List<Product> productList = new ArrayList<Product>();
-        productRepository.findAll().forEach(product -> productList.add(product));
-        return productList;
-    }
+    List<Product> getAllProduct();
 
-    public Product getProduct(Integer id) {
-        return productRepository.findById(id).get();
-    }
+    Optional<Product> getProduct(Integer id);
 
-    public void delete(Integer id) {
-        productRepository.deleteById(id);
-    }
+    void delete(Integer id);
 
-    public void add(Product product) {
-        productRepository.save(product);
-    }
+    void add(Product product);
 
-    public void edit(Product product) {
-        productRepository.save(product);
-    }
+    void edit(Product product);
 }

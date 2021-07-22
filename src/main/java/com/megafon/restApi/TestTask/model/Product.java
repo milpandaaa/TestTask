@@ -12,14 +12,19 @@ public class Product {
     @Id
     @Column
     private Integer id;
+
     @Column
     private String title;
+
     @Column
     private Double proteins;
+
     @Column
     private Double fats;
+
     @Column
     private Double carbohydrates;
+
     @Column
     private Integer calorie;
 
